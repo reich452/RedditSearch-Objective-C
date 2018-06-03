@@ -51,7 +51,7 @@ static NSString * const baseURLString = @"https://www.reddit.com/r";
         if (!jsonDictionary || ![jsonDictionary isKindOfClass:[NSDictionary class]]) {
             NSDictionary *userInfo = nil;
             if (error) { userInfo = @{NSUnderlyingErrorKey : error}; }
-            NSError *localError = [NSError errorWithDomain:@"com.DevMountain.Rover.ErrorDomain" code:-1 userInfo:userInfo];
+            NSError *localError = [NSError errorWithDomain:@"com.DevMountain.RedditUnit3Test.ErrorDomain" code:-1 userInfo:userInfo];
             return completion(nil, localError);
         }
         
