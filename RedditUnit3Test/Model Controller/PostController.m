@@ -52,6 +52,7 @@ static NSString * const baseURLString = @"https://www.reddit.com/r";
             NSDictionary *userInfo = nil;
             if (error) { userInfo = @{NSUnderlyingErrorKey : error}; }
             NSError *localError = [NSError errorWithDomain:@"com.DevMountain.RedditUnit3Test.ErrorDomain" code:-1 userInfo:userInfo];
+            NSLog(@"%@", error.localizedDescription);
             return completion(nil, localError);
         }
         
@@ -60,7 +61,6 @@ static NSString * const baseURLString = @"https://www.reddit.com/r";
         NSMutableArray *postsArray = [NSMutableArray array];
         
         for (NSDictionary *dataDictionary in childrenArray) {
-            
             
             DVMPost *post = [[DVMPost alloc] initWithDictionary:dataDictionary];
             [postsArray addObject:post];
