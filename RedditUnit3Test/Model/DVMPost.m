@@ -29,17 +29,13 @@
     
     NSDictionary *dataDictionary = dictionary[@"data"];
     
-    for (NSDictionary *postData in dataDictionary) {
-        NSLog(@"%@", postData);
-        NSString *title = dataDictionary[[DVMPost titleKey]];
-        NSNumber *commentCount = dataDictionary[[DVMPost commentCountKey]];
-        NSNumber *ups = dataDictionary[[DVMPost upsKey]];
-        
-        return [self initWithTitle:title commentCount: commentCount ups: ups];
-        
-    }
+    //        NSLog(@"%@", postData);
+    NSString *title = dataDictionary[[DVMPost titleKey]];
+    NSNumber *commentCount = dataDictionary[[DVMPost commentCountKey]];
+    NSNumber *ups = dataDictionary[[DVMPost upsKey]];
     
-    return nil;
+    return [self initWithTitle:title commentCount: commentCount ups: ups];
+    
     
 }
 
